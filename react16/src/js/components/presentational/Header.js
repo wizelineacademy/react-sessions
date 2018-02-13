@@ -7,7 +7,7 @@ const HeaderStyled = styled.div`
     color: #61dafb;
     font-size: 30px;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
   }
 `;

@@ -4,12 +4,16 @@ import Menu from '../presentational/Menu';
 import Container from '../presentational/Container';
 import Header from '../presentational/Header';
 import styled from 'styled-components';
+import FragmentsExample from '../presentational/FragmentsExample';
+import CustomAttributesExample from '../presentational/CustomAttributesExample';
+import PortalExample from '../presentational/PortalExample';
+import ErrorBoundariesExample from '../presentational/ErrorBoundariesExample';
 
 const contentMap = {
-  'fragments': <Container title="Fragments">Fragments example</Container>,
-  'custom attributes': <Container title="Custom attributes">Custom attributes example</Container>,
-  'portals': <Container title="Portals">Portal example</Container>,
-  'error boundaries': <Container title="Error boundaries">Error boundaries example</Container>,
+  'fragments': <FragmentsExample />,
+  'custom attributes': <CustomAttributesExample />,
+  'portals': <PortalExample />,
+  'error boundaries': <ErrorBoundariesExample />,
 };
 
 const sections = [
