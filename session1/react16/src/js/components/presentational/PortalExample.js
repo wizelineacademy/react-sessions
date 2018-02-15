@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from './Container';
 import styled from 'styled-components';
+import { createPortal } from 'react-dom';
 
 const EvilDiv = styled.div`
   overflow: hidden;
@@ -16,6 +17,7 @@ const ModalStyled = styled.div`
   margin: 0 auto;
   border: 5px solid black;
   background: white;
+  z-index: 999;
 
   h4 {
     color: white;
@@ -30,15 +32,34 @@ const ModalStyled = styled.div`
   }
 `;
 
+const MaskStyled = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  opacity: 0.8;
+`;
+
+const MagicPortal = ({ children }) => {
+  const nodeToAppend = document.getElementsByTagName('body')[0];
+
+  return createPortal(children, nodeToAppend);
+}
+
 const Modal = () => (
-  <ModalStyled>
-    <h4>
-      Portal Example
-    </h4>
-    <p>
-      I want to show you a very importan info here:
-    </p>
-  </ModalStyled>
+  <MagicPortal>
+    <ModalStyled>
+      <h4>
+        Portal Example
+      </h4>
+      <p>
+        I want to show you a very importan info here:
+      </p>
+    </ModalStyled>
+    <MaskStyled />
+  </MagicPortal>
 );
 
 const PortalExample = () => (

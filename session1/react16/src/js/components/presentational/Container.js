@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const H3 = styled.h3`
@@ -16,11 +16,16 @@ const ContainerStyled = styled.div`
   color: #6f6f6f;
 `;
 
-const Container = ({ title, children }) => (
-  <ContainerStyled>
-    <H3>{title}</H3>
-    {children}
-  </ContainerStyled>
-);
+class Container extends Component {
+  render() {
+    const { title, children } = this.props;
+    return (
+      <ContainerStyled>
+        <H3>{title}</H3>
+        {children}
+      </ContainerStyled>
+    );
+  }
+}
 
 export default Container;

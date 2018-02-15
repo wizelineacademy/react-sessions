@@ -8,8 +8,10 @@ import FragmentsExample from '../presentational/FragmentsExample';
 import CustomAttributesExample from '../presentational/CustomAttributesExample';
 import PortalExample from '../presentational/PortalExample';
 import ErrorBoundariesExample from '../presentational/ErrorBoundariesExample';
+import AnimationExample from '../presentational/AnimationExample';
 
 const contentMap = {
+  'animation': <AnimationExample />,
   'fragments': <FragmentsExample />,
   'custom attributes': <CustomAttributesExample />,
   'portals': <PortalExample />,
@@ -17,6 +19,7 @@ const contentMap = {
 };
 
 const sections = [
+  'animation',
   'fragments',
   'custom attributes',
   'portals',
