@@ -13,6 +13,7 @@ const TileStyled = styled.div`
   cursor: pointer;
   text-align: center;
   overflow: hidden;
+  user-select: none;
 
   &:hover {
     background-color: black;

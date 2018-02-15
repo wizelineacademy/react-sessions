@@ -27,10 +27,16 @@ class AnimationExample extends Component {
     super(props);
 
     this.state = initialState;
+    this.calculateDimensions = this.calculateDimensions.bind(this);
   }
 
   componentDidMount() {
     this.calculateDimensions();
+    window.addEventListener("resize", this.calculateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.calculateDimensions);
   }
 
   calculateDimensions() {
