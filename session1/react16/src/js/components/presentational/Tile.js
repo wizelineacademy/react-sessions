@@ -29,7 +29,7 @@ class Tile extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    this.intervalId = setInterval(() => {
       this.setState((prevState) => {
         if (prevState.count >= 9) {
           return { count: 0 };
@@ -37,6 +37,12 @@ class Tile extends Component {
         return { count: prevState.count + 1};
       });
     }, 1500);
+  }
+
+  componentWillUnmount() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId)
+    }
   }
 
   changeColor() {

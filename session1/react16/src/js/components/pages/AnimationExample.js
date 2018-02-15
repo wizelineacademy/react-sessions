@@ -15,7 +15,7 @@ const TileList = ({ limit, width, height }) => {
   const list = [];
 
   for (let index = 0; index < limit; index++) {
-    list.push(<Tile index={index} width={width} height={height} />);
+    list.push(<Tile key={index} width={width} height={height} />);
   }
 
   return list;
