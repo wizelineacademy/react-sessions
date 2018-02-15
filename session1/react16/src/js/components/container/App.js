@@ -4,11 +4,13 @@ import Menu from '../presentational/Menu';
 import Container from '../presentational/Container';
 import Header from '../presentational/Header';
 import styled from 'styled-components';
-import FragmentsExample from '../presentational/FragmentsExample';
-import CustomAttributesExample from '../presentational/CustomAttributesExample';
-import PortalExample from '../presentational/PortalExample';
-import ErrorBoundariesExample from '../presentational/ErrorBoundariesExample';
-import AnimationExample from '../presentational/AnimationExample';
+import {
+  FragmentsExample,
+  CustomAttributesExample,
+  PortalExample,
+  ErrorBoundariesExample,
+  AnimationExample,
+} from '../pages';
 
 const contentMap = {
   'animation': <AnimationExample />,

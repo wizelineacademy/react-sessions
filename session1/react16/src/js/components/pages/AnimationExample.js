@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom'
-import Container from './Container';
-import { TileStyled } from './Tile.styled';
+import Container from '../presentational/Container';
+import { TileStyled } from '../presentational/Tile.styled';
 import styled from 'styled-components';
-import Tile from './Tile';
+import Tile from '../presentational/Tile';
 
 const ITEMS_COUNT = 20;
 

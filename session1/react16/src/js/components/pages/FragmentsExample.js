@@ -1,6 +1,6 @@
 import React from 'react';
-import Container from './Container';
-import { FragmentString, FragmentArray } from './Fragments';
+import Container from '../presentational/Container';
+import { FragmentString, FragmentArray } from '../presentational/Fragments';
 
 const FragmentsExample = () => {
   const fragmentsComponents = [FragmentString, FragmentArray];
