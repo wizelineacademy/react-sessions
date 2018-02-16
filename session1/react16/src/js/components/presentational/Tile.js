@@ -21,7 +21,7 @@ class Tile extends Component {
     this.state = {
       count: 0,
       clicked: false,
-      color: COLORS[getRandomIndex(COLORS.length)].code,
+      color: COLORS[getRandomIndex(COLORS.length + 1)].code,
     }
 
     this.changeColor = this.changeColor.bind(this);
