@@ -4,6 +4,7 @@ import Container from '../presentational/Container';
 import { TileStyled } from '../presentational/Tile.styled';
 import styled from 'styled-components';
 import Tile from '../presentational/Tile';
+/* import TileErrorBoundary from '../presentational/TileErrorBoundary';*/
 
 const ITEMS_COUNT = 20;
 
