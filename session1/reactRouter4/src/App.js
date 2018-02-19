@@ -21,22 +21,27 @@ import RedirectComponent from './slides/RedirectComponent';
 import DecentralizedPattern from './slides/DecentralizedPattern';
 import Authentication from './slides/Authentication';
 
-const ComponentsView = ({ match }) => {
+const SingleComponentView = ({ match }) => {
   const ExistingComponents = {
     RouteComponent: RouteComponent,
     LinkComponent: LinkComponent,
   };
+  const Component = ExistingComponents[match.params.componentName];
 
-  return(
+  return (
     <div>
-      <Route exact path={`${match.path}`} component={ComponentsHome} />
-      <Route path={`${match.path}`} component={ComponentsNav} />
-      <Route path={`${match.path}/:componentName`} render={({ match }) => {
-        const Component = ExistingComponents[match.params.componentName];
-
-        return <Component />;
-      }}  />
+      <ComponentsNav />
+      <Component />
     </div>
+  );
+}
+
+const ComponentsView = ({ match }) => {
+  return(
+    <Switch>
+      <Route path={`${match.path}/:componentName`} component={SingleComponentView}  />
+      <Route path={`${match.path}`} component={ComponentsHome} />
+    </Switch>
   )
 };
 
