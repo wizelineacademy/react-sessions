@@ -21,6 +21,13 @@ import RedirectComponent from './slides/RedirectComponent';
 import DecentralizedPattern from './slides/DecentralizedPattern';
 import Authentication from './slides/Authentication';
 
+const ComponentsView = () => {
+  return (
+    <div>
+    </div>
+  )
+};
+
 class App extends Component {
   render() {
     return (
@@ -33,7 +40,7 @@ class App extends Component {
             <li><NavLink to="/components/RouteComponent" activeClass="active">Route component (#step2-route-component)</NavLink></li>
             <li><NavLink to="/components/LinkComponent" activeClass="active">Link component (#step3-link-component)</NavLink></li>
             <li><NavLink to="/DecentralizedPattern" activeClass="active">Decentralized pattern (#step4-decentralized-pattern)</NavLink></li>
-            <li><NavLink to="/components/RedirectComponent" activeClass="active">Redirect component (#step5-redirect-component)</NavLink></li>
+            <li><NavLink to="/RedirectComponent" activeClass="active">Redirect component (#step5-redirect-component)</NavLink></li>
             <li><NavLink to="/Authentication" activeClass="active">Authentication (#step6-authentication)</NavLink></li>
           </ul>
           <hr />
@@ -47,7 +54,7 @@ class App extends Component {
           <Route path="/components/RouteComponent" component={RouteComponent}  />
           <Route path="/components/LinkComponent" component={LinkComponent}  />
           <Route path="/DecentralizedPattern" component={DecentralizedPattern}  />
-          <Route path="/components/RedirectComponent" component={RedirectComponent}  />
+          <Route path="/RedirectComponent" component={RedirectComponent}  />
           <Route path="/Authentication" component={Authentication}  />
         </Switch>
       </div>
