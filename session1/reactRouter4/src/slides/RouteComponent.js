@@ -23,7 +23,6 @@ const RouteComponent = () => (
     <p><strong>render</strong></p>
     <p>
       This is similar to component, but is useful for inline rendering and passing extra props to the element.
-      This allows for convenient inline rendering and wrapping without the undesired remounting explained above.
     </p>
     <img src={routeComponentRender} />
     <p><strong>children</strong></p>
