@@ -96,13 +96,8 @@ class App extends Component {
   }
 
   updatePrincipal(value) {
-    this.setState((prevState) => {
-      if (value === prevState.principal) {
-        return null;
-      }
-
-      return { principal: value };
-    });
+    // Set the state and prevent changing the state if the principal is the same as the
+    // previous one
   }
 
   componentDidMount() {
