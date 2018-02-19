@@ -28,52 +28,44 @@ class App extends Component {
         <header>
           <ul>
             <li>
-              <Route path="/Introduction" children={({ match }) => {
-                const active = match ? 'active' : '';
-                return `Introduction ${active.toUpperCase()}`;
-              }} />
+              <Link to="/Introduction">
+                Introduction
+              </Link>
             </li>
             <li>
-              <Route path="/MentalModel" children={({ match }) => {
-                const active = match ? 'active' : '';
-                return `Mental model change ${active.toUpperCase()}`;
-              }} />
+              <Link to="/MentalModel">
+                Mental model change
+              </Link>
             </li>
             <li>
-              <Route path="/InitConfiguration" children={({ match }) => {
-                const active = match ? 'active' : '';
-                return `Init configuration (#step1-init-config) ${active.toUpperCase()}`;
-              }} />
+              <Link to="/InitConfiguration">
+                Init configuration (#step1-init-config)
+              </Link>
             </li>
             <li>
-              <Route path="/RouteComponent" children={({ match }) => {
-                const active = match ? 'active' : '';
-                return `Route component (#step2-route-component) ${active.toUpperCase()}`;
-              }} />
+              <Link to="/RouteComponent">
+                Route component (#step2-route-component)
+              </Link>
             </li>
             <li>
-              <Route path="/LinkComponent" children={({ match }) => {
-                const active = match ? 'active' : '';
-                return `Link component (#step3-link-component) ${active.toUpperCase()}`;
-              }} />
+              <Link to="/LinkComponent">
+                Link component (#step3-link-component)
+              </Link>
             </li>
             <li>
-              <Route path="/DecentralizedPattern" children={({ match }) => {
-                const active = match ? 'active' : '';
-                return `Decentralized pattern (#step4-decentralized-pattern) ${active.toUpperCase()}`;
-              }} />
+              <Link to="/DecentralizedPattern">
+                Decentralized pattern (#step4-decentralized-pattern)
+              </Link>
             </li>
             <li>
-              <Route path="/RedirectComponent" children={({ match }) => {
-                const active = match ? 'active' : '';
-                return `Redirect component (#step5-redirect-component) ${active.toUpperCase()}`;
-              }} />
+              <Link to="/RedirectComponent">
+                Redirect component (#step5-redirect-component)
+              </Link>
             </li>
             <li>
-              <Route path="/Authentication" children={({ match }) => {
-                const active = match ? 'active' : '';
-                return `Authentication (#step6-authentication) ${active.toUpperCase()}`;
-              }} />
+              <Link to="/Authentication">
+                Authentication (#step6-authentication)
+              </Link>
             </li>
           </ul>
           <hr />
