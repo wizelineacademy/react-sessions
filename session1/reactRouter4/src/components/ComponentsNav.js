@@ -21,7 +21,6 @@ class ComponentsNav extends Component {
       <ul>
         <li><NavLink activeClass="active" to="/components/RouteComponent">Route component</NavLink></li>
         <li><NavLink activeClass="active" to="/components/LinkComponent">Link component</NavLink></li>
-        <li><NavLink activeClass="active" to="/components/SwitchComponent">Switch component</NavLink></li>
         <li><NavLink activeClass="active" to="/components/RedirectComponent">Redirect component</NavLink></li> 
       </ul>
     );
