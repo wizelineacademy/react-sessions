@@ -6,7 +6,7 @@ import {
 
 const MentalModel = () => (
   <div className="slide-container">
-    <h1>Mental model change (#step2-mental-model)</h1>
+    <h1>Mental model change</h1>
     <h3>- Relationship with the layout</h3>
     <h3>- Changes</h3>
     <img src={exampleCentralizedRoutes} />

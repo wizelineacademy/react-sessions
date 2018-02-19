@@ -3,7 +3,7 @@ import { linkComponentToObject } from '../images';
 
 const LinkComponent = () => (
   <div className="slide-container">
-    <h1>Link component (#step5-link-component)</h1>
+    <h1>Link component (#step3-link-component)</h1>
     <h3>- Link component props</h3>
     <p>to as string: A string representation of the location to link to, created by concatenating the location’s pathname, search, and hash properties.</p>
     <p>to as object: An object that can have any of the following properties: pathname, search, hash, state</p>
