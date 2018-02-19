@@ -1,0 +1,23 @@
+.App {
+
+}
+
+.slide-container {
+  min-height: 400px;
+  background-color: silver;
+  margin: 25px;
+  padding: 25px;
+  text-align: left;
+}
+
+.slide-container img {
+  width: 100%;
+}
+
+.comment {
+  color: grey;
+}
+
+.active {
+  font-weight: bold;
+}
