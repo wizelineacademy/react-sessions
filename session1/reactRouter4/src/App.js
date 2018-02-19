@@ -73,6 +73,7 @@ class App extends Component {
           <Route path="/DecentralizedPattern" component={DecentralizedPattern}  />
           <Route path="/RedirectComponent" component={RedirectComponent}  />
           <Route path="/Authentication" component={Authentication}  />
+          <Route component={NotFound} />
         </Switch>
       </div>
     );
