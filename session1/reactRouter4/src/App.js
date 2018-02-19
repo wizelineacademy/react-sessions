@@ -28,12 +28,13 @@ const SingleComponentView = ({ match }) => {
   };
   const Component = ExistingComponents[match.params.componentName];
 
-  return (
-    <div>
-      <ComponentsNav />
-      <Component />
-    </div>
-  );
+  return Component
+    ? (
+      <div>
+        <ComponentsNav />
+        <Component />
+      </div>
+    ) : <NotFound />;
 }
 
 const ComponentsView = ({ match }) => {
