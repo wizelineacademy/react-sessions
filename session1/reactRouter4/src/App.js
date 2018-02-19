@@ -27,12 +27,12 @@ class App extends Component {
       <div className="App">
         <header>
           <ul>
-            <li>Introduction (#step1-introduction)</li>
-            <li>Mental model change (#step2-mental-model)</li>
-            <li>Init configuration (#step3-init-config)</li>
-            <li>Route component (#step4-route-component)</li>
-            <li>Link component (#step5-link-component)</li>
-            <li>Decentralized pattern (#step6-decentralized-pattern)</li>
+            <li>Introduction</li>
+            <li>Mental model change</li>
+            <li>Init configuration (#step1-init-config)</li>
+            <li>Route component (#step2-route-component)</li>
+            <li>Link component (#step3-link-component)</li>
+            <li>Decentralized pattern (#step4-decentralized-pattern)</li>
             <li>Redirect component (#step5-redirect-component)</li>
             <li>Authentication (#step6-authentication)</li>
           </ul>

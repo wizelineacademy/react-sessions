@@ -6,7 +6,7 @@ import {
 
 const DecentralizedPattern = () => (
   <div className="slide-container">
-    <h1>Decentralized Pattern (#step6-decentralized-pattern)</h1>
+    <h1>Decentralized Pattern (#step4-decentralized-pattern)</h1>
     <h3>Change from this:</h3>
     <img src={nestedLayoutBefore} />
     <h3>To this:</h3>
