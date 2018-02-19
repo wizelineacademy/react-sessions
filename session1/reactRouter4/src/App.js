@@ -21,10 +21,11 @@ import RedirectComponent from './slides/RedirectComponent';
 import DecentralizedPattern from './slides/DecentralizedPattern';
 import Authentication from './slides/Authentication';
 
-const ComponentsView = () => {
-  return (
+const ComponentsView = ({ match }) => {
+  return match.isExact
+  ? <ComponentsHome />
+  : (
     <div>
-      <Route path="/components" component={ComponentsHome} />
       <Route path="/components" component={ComponentsNav} />
       <Route path="/components/RouteComponent" component={RouteComponent}  />
       <Route path="/components/LinkComponent" component={LinkComponent}  />
