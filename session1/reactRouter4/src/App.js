@@ -24,6 +24,10 @@ import Authentication from './slides/Authentication';
 const ComponentsView = () => {
   return (
     <div>
+      <Route path="/components" component={ComponentsHome} />
+      <Route path="/components" component={ComponentsNav} />
+      <Route path="/components/RouteComponent" component={RouteComponent}  />
+      <Route path="/components/LinkComponent" component={LinkComponent}  />
     </div>
   )
 };
@@ -49,10 +53,9 @@ class App extends Component {
           <Route path="/Introduction" component={Introduction}  />
           <Route path="/MentalModel" component={MentalModel}  />
           <Route path="/InitConfiguration" component={InitConfiguration}  />
-          <Route path="/components" component={ComponentsHome} />
-          <Route path="/components" component={ComponentsNav} />
-          <Route path="/components/RouteComponent" component={RouteComponent}  />
-          <Route path="/components/LinkComponent" component={LinkComponent}  />
+
+          <Route path="/components" component={ComponentsView} />
+
           <Route path="/DecentralizedPattern" component={DecentralizedPattern}  />
           <Route path="/RedirectComponent" component={RedirectComponent}  />
           <Route path="/Authentication" component={Authentication}  />
