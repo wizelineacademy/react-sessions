@@ -43,6 +43,7 @@ class App extends Component {
           <Route path="/MentalModel" component={MentalModel}  />
           <Route path="/InitConfiguration" component={InitConfiguration}  />
           <Route exact path="/components" component={ComponentsHome} />
+          <Route path="/components" component={ComponentsNav} />
           <Route path="/components/RouteComponent" component={RouteComponent}  />
           <Route path="/components/LinkComponent" component={LinkComponent}  />
           <Route path="/DecentralizedPattern" component={DecentralizedPattern}  />
