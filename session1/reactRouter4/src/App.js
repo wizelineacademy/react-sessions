@@ -26,9 +26,9 @@ const ComponentsView = ({ match }) => {
   ? <ComponentsHome />
   : (
     <div>
-      <Route path="/components" component={ComponentsNav} />
-      <Route path="/components/RouteComponent" component={RouteComponent}  />
-      <Route path="/components/LinkComponent" component={LinkComponent}  />
+      <Route path={`${match.path}`} component={ComponentsNav} />
+      <Route path={`${match.path}/RouteComponent`} component={RouteComponent}  />
+      <Route path={`${match.path}/LinkComponent`} component={LinkComponent}  />
     </div>
   )
 };
