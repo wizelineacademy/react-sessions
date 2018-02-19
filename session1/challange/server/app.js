@@ -3,7 +3,7 @@ const http = require("http");
 const socketIo = require("socket.io");
 const axios = require("axios");
 
-const SECRET_KEY = 'de34dd014e55386c25ca2896e166c876';
+const SECRET_KEY = '';
 const LOCATION = '43.7695,11.2558';
 
 const API_HOST = 'https://api.darksky.net/forecast/';
