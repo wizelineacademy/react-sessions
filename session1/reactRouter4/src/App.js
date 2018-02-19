@@ -27,46 +27,14 @@ class App extends Component {
       <div className="App">
         <header>
           <ul>
-            <li>
-              <Link to="/Introduction">
-                Introduction
-              </Link>
-            </li>
-            <li>
-              <Link to="/MentalModel">
-                Mental model change
-              </Link>
-            </li>
-            <li>
-              <Link to="/InitConfiguration">
-                Init configuration (#step1-init-config)
-              </Link>
-            </li>
-            <li>
-              <Link to="/RouteComponent">
-                Route component (#step2-route-component)
-              </Link>
-            </li>
-            <li>
-              <Link to="/LinkComponent">
-                Link component (#step3-link-component)
-              </Link>
-            </li>
-            <li>
-              <Link to="/DecentralizedPattern">
-                Decentralized pattern (#step4-decentralized-pattern)
-              </Link>
-            </li>
-            <li>
-              <Link to="/RedirectComponent">
-                Redirect component (#step5-redirect-component)
-              </Link>
-            </li>
-            <li>
-              <Link to="/Authentication">
-                Authentication (#step6-authentication)
-              </Link>
-            </li>
+            <li><NavLink to="/Introduction" activeClass="active">Introduction</NavLink></li>
+            <li><NavLink to="/MentalModel" activeClass="active">Mental model change</NavLink></li>
+            <li><NavLink to="/InitConfiguration" activeClass="active">Init configuration (#step1-init-config)</NavLink></li>
+            <li><NavLink to="/RouteComponent" activeClass="active">Route component (#step2-route-component)</NavLink></li>
+            <li><NavLink to="/LinkComponent" activeClass="active">Link component (#step3-link-component)</NavLink></li>
+            <li><NavLink to="/DecentralizedPattern" activeClass="active">Decentralized pattern (#step4-decentralized-pattern)</NavLink></li>
+            <li><NavLink to="/RedirectComponent" activeClass="active">Redirect component (#step5-redirect-component)</NavLink></li>
+            <li><NavLink to="/Authentication" activeClass="active">Authentication (#step6-authentication)</NavLink></li>
           </ul>
           <hr />
         </header>
