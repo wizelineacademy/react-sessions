@@ -74,7 +74,10 @@ class App extends Component {
           <Route path="/RedirectComponent" component={RedirectComponent}  />
           <Route path="/Authentication" component={Authentication}  />
           <Redirect from="/component" to="/components" />
-          <Redirect to="/Introduction" />
+          <Redirect to={{
+            pathname: "/Introduction",
+            state: { from: 'NOT FOUND PAGE' },
+          }} />
         </Switch>
       </div>
     );
