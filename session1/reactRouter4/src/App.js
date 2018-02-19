@@ -38,18 +38,18 @@ class App extends Component {
           </ul>
           <hr />
         </header>
-        <p className="App-intro">
+        <Switch>
           <Route path="/Introduction" component={Introduction}  />
           <Route path="/MentalModel" component={MentalModel}  />
           <Route path="/InitConfiguration" component={InitConfiguration}  />
-          <Route exact path="/components" component={ComponentsHome} />
+          <Route path="/components" component={ComponentsHome} />
           <Route path="/components" component={ComponentsNav} />
           <Route path="/components/RouteComponent" component={RouteComponent}  />
           <Route path="/components/LinkComponent" component={LinkComponent}  />
           <Route path="/DecentralizedPattern" component={DecentralizedPattern}  />
           <Route path="/components/RedirectComponent" component={RedirectComponent}  />
           <Route path="/Authentication" component={Authentication}  />
-        </p>
+        </Switch>
       </div>
     );
   }
