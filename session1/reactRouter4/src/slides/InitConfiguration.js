@@ -3,7 +3,7 @@ import { initConfigRouter } from '../images';
 
 const MainComponents = () => (
   <div className="slide-container">
-    <h1>Init configuration (#step3-init-config)</h1>
+    <h1>Init configuration (#step1-init-config)</h1>
     <h3>- Client config</h3>
     <p className="comment">
       // install `npm install react-router-dom`

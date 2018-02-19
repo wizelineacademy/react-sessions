@@ -9,7 +9,7 @@ import {
 
 const RouteComponent = () => (
   <div className="slide-container">
-    <h1>Route component (#step4-route-component)</h1>
+    <h1>Route component (#step2-route-component)</h1>
     <h3>- The Route component</h3>
     <p>The <strong>Route</strong> component is the main building block of React Router. </p>
 
