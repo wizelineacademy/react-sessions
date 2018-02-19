@@ -12,7 +12,7 @@ const Introduction = ({ location={} }) => (
         && `REDIRECTED FROM: ${location.state.from}`
     }
     <div className="slide-container">
-      <h1>Introduction (#step1-introduction)</h1>
+      <h1>Introduction</h1>
       <h3>- Real life example</h3>
       <p className="comment">
         // Real application's main routes configuration
