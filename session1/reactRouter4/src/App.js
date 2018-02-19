@@ -31,7 +31,11 @@ const ComponentsView = ({ match }) => {
     <div>
       <Route exact path={`${match.path}`} component={ComponentsHome} />
       <Route path={`${match.path}`} component={ComponentsNav} />
-      <Route path={`${match.path}/:componentName`} render={() => "SingleComponent"}  />
+      <Route path={`${match.path}/:componentName`} render={({ match }) => {
+        const Component = ExistingComponents[match.params.componentName];
+
+        return <Component />;
+      }}  />
     </div>
   )
 };
