@@ -27,14 +27,54 @@ class App extends Component {
       <div className="App">
         <header>
           <ul>
-            <li>Introduction</li>
-            <li>Mental model change</li>
-            <li>Init configuration (#step1-init-config)</li>
-            <li>Route component (#step2-route-component)</li>
-            <li>Link component (#step3-link-component)</li>
-            <li>Decentralized pattern (#step4-decentralized-pattern)</li>
-            <li>Redirect component (#step5-redirect-component)</li>
-            <li>Authentication (#step6-authentication)</li>
+            <li>
+              <Route path="/Introduction" children={({ match }) => {
+                const active = match ? 'active' : '';
+                return `Introduction ${active.toUpperCase()}`;
+              }} />
+            </li>
+            <li>
+              <Route path="/MentalModel" children={({ match }) => {
+                const active = match ? 'active' : '';
+                return `Mental model change ${active.toUpperCase()}`;
+              }} />
+            </li>
+            <li>
+              <Route path="/InitConfiguration" children={({ match }) => {
+                const active = match ? 'active' : '';
+                return `Init configuration (#step1-init-config) ${active.toUpperCase()}`;
+              }} />
+            </li>
+            <li>
+              <Route path="/RouteComponent" children={({ match }) => {
+                const active = match ? 'active' : '';
+                return `Route component (#step2-route-component) ${active.toUpperCase()}`;
+              }} />
+            </li>
+            <li>
+              <Route path="/LinkComponent" children={({ match }) => {
+                const active = match ? 'active' : '';
+                return `Link component (#step3-link-component) ${active.toUpperCase()}`;
+              }} />
+            </li>
+            <li>
+              <Route path="/DecentralizedPattern" children={({ match }) => {
+                const active = match ? 'active' : '';
+                return `Decentralized pattern (#step4-decentralized-pattern) ${active.toUpperCase()}`;
+              }} />
+            </li>
+            <li>
+              <Route path="/RedirectComponent" children={({ match }) => {
+                const active = match ? 'active' : '';
+                return `Redirect component (#step5-redirect-component) ${active.toUpperCase()}`;
+              }} />
+            </li>
+            <li>
+              <Route path="/Authentication" children={({ match }) => {
+                const active = match ? 'active' : '';
+                return `Authentication (#step6-authentication) ${active.toUpperCase()}`;
+              }} />
+            </li>
           </ul>
           <hr />
         </header>
