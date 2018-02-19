@@ -1,0 +1,14 @@
+export const appCentralizedRoutes = require('./app_centralized_routes.png');
+export const exampleCentralizedRoutes = require('./example_centralized_routes.png');
+export const exampleDynamicRoutes = require('./example_dynamic_routes.png');
+export const initConfigRouter = require('./init_config_router.png');
+export const linkComponentToObject = require('./link_component_to_object.png');
+export const nestedLayoutAfter = require('./nested_layout_after.png');
+export const nestedLayoutBefore = require('./nested_layout_before.png');
+export const redirectComponentObject = require('./redirect_component_object.png');
+export const routeComponentChildren = require('./route_component_children.png');
+export const routeComponentComponent = require('./route_component_component.png');
+export const routeComponentPassProps = require('./route_component_pass_props.png')
+export const routeComponentRender = require('./route_component_render.png');
+export const routeLocationObject = require('./route_location_object.png');
+export const serviceCentralizedRoutes = require('./service_centralized_routes.png');
