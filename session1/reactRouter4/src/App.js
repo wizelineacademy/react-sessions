@@ -22,10 +22,9 @@ import DecentralizedPattern from './slides/DecentralizedPattern';
 import Authentication from './slides/Authentication';
 
 const ComponentsView = ({ match }) => {
-  return match.isExact
-  ? <ComponentsHome />
-  : (
+  return(
     <div>
+      <Route exact path={`${match.path}`} component={ComponentsHome} />
       <Route path={`${match.path}`} component={ComponentsNav} />
       <Route path={`${match.path}/RouteComponent`} component={RouteComponent}  />
       <Route path={`${match.path}/LinkComponent`} component={LinkComponent}  />
