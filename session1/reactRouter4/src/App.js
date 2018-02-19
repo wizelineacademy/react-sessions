@@ -22,6 +22,11 @@ import DecentralizedPattern from './slides/DecentralizedPattern';
 import Authentication from './slides/Authentication';
 
 const ComponentsView = ({ match }) => {
+  const ExistingComponents = {
+    RouteComponent: RouteComponent,
+    LinkComponent: LinkComponent,
+  };
+
   return(
     <div>
       <Route exact path={`${match.path}`} component={ComponentsHome} />
