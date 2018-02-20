@@ -5,7 +5,7 @@
 The following project is using socket io and it's getting information about Forecast.
 You can create you own account or use the mocked object provided in this example.
 
-!(Dark Sky')[darksky.net]
+[Dark Sky](darksky.net)
 
 ## Instructions
 
