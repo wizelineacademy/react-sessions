@@ -13,6 +13,10 @@ const LI = styled.li`
     color: white;
     opacity: 0.8;
   }
+  .active {
+    background: red;
+    color: white;
+  }
   ${({ active }) => {
     if (active) {
       return `

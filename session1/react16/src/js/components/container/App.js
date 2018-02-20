@@ -12,6 +12,15 @@ import {
   AnimationExample,
 } from '../pages';
 
+import {
+  Route,
+  Redirect,
+  Link,
+  NavLink,
+  Switch,
+  withRouter,
+} from 'react-router-dom';
+
 const contentMap = {
   'animation': <AnimationExample />,
   'fragments': <FragmentsExample />,
