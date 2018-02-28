@@ -1,8 +1,9 @@
-class PokeAPIClient {
-  constructor() {
-    this.pokeAPIUrl = 'https://pokeapi.co/api/v2';
-  }
+const pokemonData = require('../pokemon.json');
 
+class PokeAPIClient {
+  getPokemonList() {
+    return pokemonData;
+  }
 }
 
 module.exports = PokeAPIClient;

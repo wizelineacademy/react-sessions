@@ -11,7 +11,8 @@ const QueryType = new GraphQLObjectType({
   fields: () => ({
     pokemons: {
       type: GraphQLList(PokemonType),
-      resolve: () => [],
+      resolve: (root, args, { apiClient }) =>
+        apiClient.getPokemonList(),
     },
   }),
 });
