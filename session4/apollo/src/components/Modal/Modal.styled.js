@@ -8,6 +8,7 @@ export const Overlay = styled.div`
   top: 0;
   left: 0;
   justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 `;
@@ -20,4 +21,5 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   justify-content: center;
+  align-items: center;
 `

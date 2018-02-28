@@ -16,7 +16,6 @@ export const Name = styled.strong`
 
 export const Image = styled.img`
   object-fit: contain;
-  width: 80%;
 `;
 
 export const DetailItem = styled.div`
