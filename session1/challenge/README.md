@@ -69,4 +69,12 @@ cd client && yarn start
 └── yarn.lock
 ```
 
+### Requeriments
+
+[ ] A component with Portal
+[ ] A component using fragments
+[ ] An component using an error boundary
+[ ] Use functional state
+
+
 ### Happy coding
