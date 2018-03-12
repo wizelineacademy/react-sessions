@@ -7,7 +7,7 @@ import { injectGlobal } from 'styled-components';
 injectGlobal`
   body {
     font-family: 'Roboto Slab', serif;
-    background-color: #282E53;
+    background-color: #dee3eb;
     color: #EFEFF2;
   }
 `;

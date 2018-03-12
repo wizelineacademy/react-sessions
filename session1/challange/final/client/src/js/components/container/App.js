@@ -150,7 +150,6 @@ class App extends Component {
 
     return (
       <AppStyled>
-        <h1>Guadalajara</h1>
         <Information data={data} principal={principal} onClick={this.updatePrincipal} />
       </AppStyled>
     );

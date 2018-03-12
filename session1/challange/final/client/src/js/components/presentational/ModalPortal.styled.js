@@ -1,17 +1,18 @@
 import styled from 'styled-components';
+import { niceGradient } from '../container/App.styled';
 
 const visible = ({ open }) => open ? 'block' : 'none';
 
 const ModalStyled = styled.div`
   position: fixed;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-color: #7C7893;
-  background-color: #EEC0DB;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   text-align: center;
-  color: #282E53;
+  color: #dee3eb;
+
+  ${niceGradient}
 
   display: ${visible};
 
@@ -23,7 +24,7 @@ const ModalStyled = styled.div`
   }
 
   h2 {
-    color: #FA638F;
+    color: #dee3eb;
     text-transform: capitalize;
     font-size: 5em;
     margin-top: 10%;
@@ -31,7 +32,7 @@ const ModalStyled = styled.div`
 
   span {
     font-size: 14em;
-    color: #43A4F2;
+    color: #dee3eb;
   }
 `;
 
