@@ -32,8 +32,41 @@ node ./server/app.js
 run the client
 
 ```sh
-cd start/client && yarn start
+cd client && yarn start
 ```
 
+### File structure
+
+#### Client
+``` sh
+├── package.json
+├── src
+│   ├── index.html
+│   ├── js
+│   │   ├── app.js
+│   │   └── components
+│   │       ├── container
+│   │       │   ├── App.js
+│   │       │   ├── App.styled.js
+│   │       │   └── constants.js
+│   │       └── presentational
+│   │           ├── ModalPortal.js
+│   │           ├── ModalPortal.styled.js
+│   │           ├── TileErrorBoundary.js
+│   │           └── index.js
+│   └── reset.css
+├── webpack.config.js
+└── yarn.lock
+```
+
+#### Server
+
+```sh
+├── app.js
+├── package.json
+├── routes
+│   └── index.js
+└── yarn.lock
+```
 
 ### Happy coding
