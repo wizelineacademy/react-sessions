@@ -12,10 +12,7 @@ import { FAKE_DATA, ENDPOINT } from './constants';
 const transformKey = (text) => text.replace(/([a-z](?=[A-Z]))/g, '$1 ');
 
 const DataTile = ({ name, value, loading, active, onClick }) => {
-  if (value < 1) {
-    throw new Error('Zero is not allowed');
-  }
-
+  // TODO: Throw an error if the value is less than 1
   return (
     <DataTileStyled
       loading={loading}
@@ -30,27 +27,28 @@ const DataTile = ({ name, value, loading, active, onClick }) => {
 
 const DataList = ({ data, loading, onClick, principal}) => {
   const items = loading ? FAKE_DATA : data;
+  // TODO: Use the DateTile and return an array for every data
 
-  return Object.keys(items).map((key, index) => (
-    <TileErrorBoundary key={index} >
-      <DataTile
-        value={items[key]}
-        name={key}
-        onClick={onClick}
-        loading={loading}
-        active={key === principal} />
-    </TileErrorBoundary>
-  ));
+  /* value={items[key]}
+   * name={key}
+   * onClick={onClick}
+   * loading={loading}
+   * active={key === principal}*/
+
+  return null
 }
 
 const InformationModal = ({ open, onClick, children }) => {
-  return (
-    <Portal>
+  // TODO: Create a Portal component and wrap a modal
+  // Create the portal on the ../presentational/ModalPortal.js file
+
+  const modal = (
       <Modal open={open} onClick={onClick}>
         {children}
       </Modal>
-    </Portal>
   );
+
+  return null;
 }
 
 class MainTile extends Component {
@@ -135,13 +133,12 @@ class App extends Component {
   componentDidMount() {
     const socket = socketIOClient(ENDPOINT);
 
-    const updateTemperature = (prevState, data) => {
-      const newState = prevState.temperature === data.temperature ? null : { data };
-      return newState;
-    }
+
+    // TODO: Update the state.date only if the date.temperature is different
+    // Use functional state
 
     socket.on("FromAPI", (data) => {
-      this.setState((prevState) => updateTemperature(prevState, data.data));
+      this.setState(() => null);
     });
   }
 

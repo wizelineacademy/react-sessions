@@ -76,5 +76,7 @@ cd client && yarn start
 [ ] An component using an error boundary
 [ ] Use functional state
 
+Hint: Search for TODO's on the challange/client directory
+
 
 ### Happy coding

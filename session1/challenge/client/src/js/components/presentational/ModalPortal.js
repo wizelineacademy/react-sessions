@@ -13,10 +13,7 @@ const Modal = ({ open, onClick, children }) => {
   );
 }
 
-const Portal = ({ children }) => {
-  const toNode = document.body;
-  return createPortal(children, toNode);
-}
+const Portal = null;
 
 export default Portal;
 export { Modal };
