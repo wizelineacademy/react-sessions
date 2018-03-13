@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from 'react-dom';
 import socketIOClient from "socket.io-client";
 import {
   AppStyled,
@@ -13,6 +14,10 @@ const transformKey = (text) => text.replace(/([a-z](?=[A-Z]))/g, '$1 ');
 
 const DataTile = ({ name, value, loading, active, onClick }) => {
   // TODO: Throw an error if the value is less than 1
+  if (value < 1) {
+    throw new Error('The value can be less than 1');
+  }
+
   return (
     <DataTileStyled
       loading={loading}
@@ -28,27 +33,36 @@ const DataTile = ({ name, value, loading, active, onClick }) => {
 const DataList = ({ data, loading, onClick, principal}) => {
   const items = loading ? FAKE_DATA : data;
   // TODO: Use the DateTile and return an array for every data
-
+  
   /* value={items[key]}
    * name={key}
    * onClick={onClick}
    * loading={loading}
    * active={key === principal}*/
-
-  return null
+  return Object.keys(items).map((key) =>{
+    return (
+      <TileErrorBoundary key={key}>
+        <DataTile 
+          value={items[key]}
+          name={key}
+          onClick={onClick}
+          loading={loading}
+          active={key === principal} />
+      </TileErrorBoundary>
+    );
+  });
 }
 
 const InformationModal = ({ open, onClick, children }) => {
   // TODO: Create a Portal component and wrap a modal
   // Create the portal on the ../presentational/ModalPortal.js file
-
   const modal = (
       <Modal open={open} onClick={onClick}>
         {children}
       </Modal>
   );
 
-  return null;
+  return ReactDOM.createPortal(modal, document.getElementsByTagName('body')[0]);;
 }
 
 class MainTile extends Component {
@@ -134,11 +148,10 @@ class App extends Component {
     const socket = socketIOClient(ENDPOINT);
 
 
-    // TODO: Update the state.date only if the date.temperature is different
-    // Use functional state
-
-    socket.on("FromAPI", (data) => {
-      this.setState(() => null);
+    socket.on("FromAPI", ({data}) => {
+      this.setState((state, props) =>  {
+        return {data};
+      });
     });
   }
 
