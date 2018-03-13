@@ -7,7 +7,7 @@ class TileErrorBoundary extends Component {
     this.state = { hasError: false };
   }
 
-  componentDidCatch(error, info) {  
+  componentDidCatch() {  
     this.setState({ hasError: true });
   }
 
