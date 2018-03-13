@@ -37,11 +37,11 @@ const DataList = ({ data, loading, onClick, principal}) => {
    * onClick={onClick}
    * loading={loading}
    * active={key === principal}*/
-  return Object.keys(items).map((key) =>{
+  return Object.entries(items).map(([key, value]) =>{
     return (
       <TileErrorBoundary key={key}>
         <DataTile 
-          value={items[key]}
+          value={value}
           name={key}
           onClick={onClick}
           loading={loading}
