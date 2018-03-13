@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Container from '../presentational/Container';
 import { FragmentString, FragmentArray, FragmentWrapper } from '../presentational/Fragments';
 import { InputStyled, WrapperStyled } from './FragmentsExample.styled';
