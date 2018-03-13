@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Container from '../presentational/Container';
-import { FragmentString, FragmentArray } from '../presentational/Fragments';
+import { FragmentString, FragmentArray, FragmentWrapper } from '../presentational/Fragments';
 import { InputStyled, WrapperStyled } from './FragmentsExample.styled';
 
 class Input extends Component {
@@ -30,13 +30,13 @@ class Input extends Component {
 }
 
 const FragmentsExample = () => {
-  const fragmentsComponents = [FragmentString, FragmentArray];
+  const FragmentsComponents = [FragmentString, FragmentArray, FragmentWrapper];
 
   return (
     <Container title="Fragments">
       <Input />
       <WrapperStyled>
-        <FragmentArray />
+        <FragmentWrapper />
       </WrapperStyled>
     </Container>
   );
