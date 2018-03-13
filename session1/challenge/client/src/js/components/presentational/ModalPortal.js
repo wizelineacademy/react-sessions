@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from 'react-dom';
 import { createPortal } from 'react-dom';
 import { ModalStyled } from './ModalPortal.styled.js';
 
@@ -13,7 +14,16 @@ const Modal = ({ open, onClick, children }) => {
   );
 }
 
-const Portal = null;
+const Portal = ({ open, onClick, children }) => {
+  return (
+    ReactDOM.createPortal(
+      <Modal open={open} onClick={onClick}>
+        {children}
+      </Modal>,
+      document.getElementsByTagName('body')[0]
+    )
+  );
+}
 
 export default Portal;
 export { Modal };

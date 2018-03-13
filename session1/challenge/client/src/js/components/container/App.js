@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from 'react-dom';
 import socketIOClient from "socket.io-client";
 import {
   AppStyled,
@@ -7,7 +6,7 @@ import {
   DataTileStyled,
   MainDataStyled,
 } from './App.styled';
-import { TileErrorBoundary, Modal, Portal } from '../presentational';
+import { TileErrorBoundary, Portal } from '../presentational';
 import { FAKE_DATA, ENDPOINT } from './constants';
 
 const transformKey = (text) => text.replace(/([a-z](?=[A-Z]))/g, '$1 ');
@@ -53,12 +52,12 @@ const DataList = ({ data, loading, onClick, principal}) => {
 
 const InformationModal = ({ open, onClick, children }) => {
   const modal = (
-      <Modal open={open} onClick={onClick}>
+      <Portal open={open} onClick={onClick}>
         {children}
-      </Modal>
+      </Portal>
   );
-
-  return ReactDOM.createPortal(modal, document.getElementsByTagName('body')[0]);;
+  
+  return modal;
 }
 
 class MainTile extends Component {
@@ -148,15 +147,10 @@ class App extends Component {
         const {temperature} = data;
         // Si no existe el data en el estado o la temperatura actual es diferente a la recivida
         if (prevState.data === null || temperature !== prevState.data.temperature) {
-          console.log(temperature, prevState.data);
-          return {date: new Date()};
+          return {data};
         }
 
         return null;
-      });
-
-      this.setState(() =>  {
-        return {data};
       });
     });
   }
