@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { DataTileStyled } from '../container/App.styled';
 
-class TileErrorBoundary extends React.Component {
+class TileErrorBoundary extends Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
