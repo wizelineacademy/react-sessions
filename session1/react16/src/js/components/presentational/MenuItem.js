@@ -27,8 +27,8 @@ const LI = styled.li`
   }}
 `;
 
-const MenuItem = ({ onClick, children, active}) => (
-  <LI onClick={onClick} active={children === active}>
+const MenuItem = ({children, active}) => (
+  <LI active={children === active}>
     {children}
   </LI>
 );

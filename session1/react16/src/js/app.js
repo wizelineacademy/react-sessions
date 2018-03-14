@@ -6,6 +6,13 @@ import {
 import App from './components/container/App';
 import reset from '../reset.css';
 import { injectGlobal } from 'styled-components';
+import {
+  FragmentsExample,
+  CustomAttributesExample,
+  PortalExample,
+  ErrorBoundariesExample,
+  AnimationExample,
+} from './components/pages';
 
 injectGlobal`
   body {
@@ -15,4 +22,8 @@ injectGlobal`
 
 const mountNode = document.getElementById('main-app');
 
-ReactDOM.render(<App />, mountNode);
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  mountNode);
