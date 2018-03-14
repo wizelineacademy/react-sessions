@@ -52,7 +52,7 @@ When rendering the Links pass a prop to indicate which link is active depending 
 ```
 
 
-Use `styled()` method to style the existing Link react router compoment and  change its color when the prop selected is present.
+Use `styled()` method to style the existing Link react router component and  change its color when the prop selected is present.
 
 The answer for each excercise can be found in the different branches of the project. 
 
