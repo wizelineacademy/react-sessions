@@ -1,0 +1,23 @@
+{
+  "name": "styled-components-course",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "styled-components": "^3.1.6"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "format": "prettier-standard 'src/**/*.+(js|jsx)' 'stories/**/*.+(js|jsx)'",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "devDependencies": {
+    "prettier-standard": "^8.0.0"
+  }
+}
