@@ -15,4 +15,8 @@ injectGlobal`
 
 const mountNode = document.getElementById('main-app');
 
-ReactDOM.render(<App />, mountNode);
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  mountNode);

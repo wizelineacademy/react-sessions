@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MenuItemList from '../presentational/MenuItemList';
 import Menu from '../presentational/Menu';
 import Container from '../presentational/Container';
 import Header from '../presentational/Header';
@@ -14,28 +13,20 @@ import {
 
 import {
   Route,
-  Redirect,
-  Link,
-  NavLink,
   Switch,
   withRouter,
 } from 'react-router-dom';
 
 const contentMap = {
-  'animation': <AnimationExample />,
-  'fragments': <FragmentsExample />,
-  'custom attributes': <CustomAttributesExample />,
-  'portals': <PortalExample />,
-  'error boundaries': <ErrorBoundariesExample />,
+  'animation': AnimationExample,
+  'fragments': FragmentsExample,
+  'custom attributes': CustomAttributesExample,
+  'portals': PortalExample,
+  'error boundaries': ErrorBoundariesExample
 };
 
-const sections = [
-  'animation',
-  'fragments',
-  'custom attributes',
-  'portals',
-  'error boundaries',
-];
+const sections = Object.keys(contentMap);
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -44,38 +35,31 @@ const Wrapper = styled.div`
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { currentSection: sections[0] };
-    this.onMenuItemClicked = this.onMenuItemClicked.bind(this);
   }
 
-
-  onMenuItemClicked(currentSection) {
-    const changeSection = (prevState) => {
-      if (prevState.currentSection === currentSection) {
-        return null;
-      }
-
-      return { currentSection };
-    }
-
-    this.setState(changeSection);
+  renderRoutes () {
+    return Object.entries(contentMap).map(([routeName, component]) => {
+      routeName = routeName.replace(/ /g, '_');
+      return <Route key={routeName}  path={`/${routeName}`} component={component} />
+    })
   }
 
   render() {
-    const { currentSection } = this.state;
-
+    const active = this.props.location.pathname.replace(/\//g, '').replace(/_/g, ' ');
     return (
       <div>
         <Header />
         <Wrapper>
           <div>
-            <Menu items={sections} onClick={this.onMenuItemClicked} active={currentSection} />
+            <Menu items={sections} active={active} />
           </div>
-          {contentMap[this.state.currentSection]}
+          <Switch>
+            {this.renderRoutes()}
+          </Switch>
         </Wrapper>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter((props) => <App location={props.location} />);
