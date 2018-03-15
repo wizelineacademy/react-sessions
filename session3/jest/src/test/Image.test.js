@@ -11,14 +11,14 @@ import Image from '../components/Image';
 describe('Image', () => {
   it('should render correctly', () => {
     const output = shallow(
-      <Image title='mockTitle' url='mockUrl' />
+      <Image alt='mockTitle' src='mockUrl' />
     );
     expect(shallowToJson(output)).toMatchSnapshot();
   });
 
   it('should render with src', () => {
     const output = shallow(
-      <Image title='mockTitle' url='mockUrl' />
+      <Image alt='mockTitle' src='mockUrl' />
     );
     expect(output.prop('src')).toEqual('mockUrl');
   });

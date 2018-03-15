@@ -2,15 +2,7 @@
 
 exports[`Image should render correctly 1`] = `
 <img
-  alt={
-    Object {
-      "alt": undefined,
-    }
-  }
-  src={
-    Object {
-      "src": undefined,
-    }
-  }
+  alt="mockTitle"
+  src="mockUrl"
 />
 `;
