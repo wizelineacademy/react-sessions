@@ -36,7 +36,7 @@
  	color:#0088CC;
 }
 
-.link a:hover ~ .border{
+.link a:hover ~ span{
  	 animation:ul 0.3s ease-out;
    background:#333;
 }
