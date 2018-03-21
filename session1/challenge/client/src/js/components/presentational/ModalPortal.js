@@ -13,7 +13,16 @@ const Modal = ({ open, onClick, children }) => {
   );
 }
 
-const Portal = null;
+const Portal = ({ open, onClick, children }) => {
+  return (
+    createPortal(
+      <Modal open={open} onClick={onClick}>
+        {children}
+      </Modal>,
+      document.body
+    )
+  );
+}
 
 export default Portal;
 export { Modal };

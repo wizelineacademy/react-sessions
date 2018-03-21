@@ -15,7 +15,7 @@ app.use(index);
 
 const server = http.createServer(app);
 const io = socketIo(server);
-
+const temperatureValues = [66.1, 65.7, 67.4, 66.9];
 
 const data = {"currently": {
   "time": 1509993277,
@@ -52,6 +52,8 @@ const getApiAndEmit = async socket => {
   try {
     // const res = await axios.get(`${API_HOST}${SECRET_KEY}/${LOCATION}`);
     // socket.emit("FromAPI", { data: res.data.currently });
+    const randIndex = Math.floor(Math.random() * parseInt(temperatureValues.length - 1));
+    data.currently.temperature = temperatureValues[randIndex];
     socket.emit("FromAPI", { data: data.currently });
   } catch (error) {
     socket.emit("FromAPI", { data: {} });

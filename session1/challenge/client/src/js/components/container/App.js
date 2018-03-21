@@ -6,13 +6,16 @@ import {
   DataTileStyled,
   MainDataStyled,
 } from './App.styled';
-import { TileErrorBoundary, Modal, Portal } from '../presentational';
+import { TileErrorBoundary, Portal } from '../presentational';
 import { FAKE_DATA, ENDPOINT } from './constants';
 
 const transformKey = (text) => text.replace(/([a-z](?=[A-Z]))/g, '$1 ');
 
 const DataTile = ({ name, value, loading, active, onClick }) => {
-  // TODO: Throw an error if the value is less than 1
+  if (value < 1) {
+    throw new Error('The value can be less than 1');
+  }
+
   return (
     <DataTileStyled
       loading={loading}
@@ -27,28 +30,34 @@ const DataTile = ({ name, value, loading, active, onClick }) => {
 
 const DataList = ({ data, loading, onClick, principal}) => {
   const items = loading ? FAKE_DATA : data;
-  // TODO: Use the DateTile and return an array for every data
-
+  
   /* value={items[key]}
    * name={key}
    * onClick={onClick}
    * loading={loading}
    * active={key === principal}*/
-
-  return null
+  return Object.entries(items).map(([key, value]) =>{
+    return (
+      <TileErrorBoundary key={key}>
+        <DataTile 
+          value={value}
+          name={key}
+          onClick={onClick}
+          loading={loading}
+          active={key === principal} />
+      </TileErrorBoundary>
+    );
+  });
 }
 
 const InformationModal = ({ open, onClick, children }) => {
-  // TODO: Create a Portal component and wrap a modal
-  // Create the portal on the ../presentational/ModalPortal.js file
-
   const modal = (
-      <Modal open={open} onClick={onClick}>
+      <Portal open={open} onClick={onClick}>
         {children}
-      </Modal>
+      </Portal>
   );
-
-  return null;
+  
+  return modal;
 }
 
 class MainTile extends Component {
@@ -133,12 +142,16 @@ class App extends Component {
   componentDidMount() {
     const socket = socketIOClient(ENDPOINT);
 
+    socket.on("FromAPI", ({data}) => {
+      this.setState((prevState, props) =>  {
+        const {temperature} = data;
+        // Si no existe el data en el estado o la temperatura actual es diferente a la recivida
+        if (prevState.data === null || temperature !== prevState.data.temperature) {
+          return {data};
+        }
 
-    // TODO: Update the state.date only if the date.temperature is different
-    // Use functional state
-
-    socket.on("FromAPI", (data) => {
-      this.setState(() => null);
+        return null;
+      });
     });
   }
 
