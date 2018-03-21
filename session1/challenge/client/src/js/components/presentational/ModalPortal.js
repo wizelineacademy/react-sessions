@@ -19,7 +19,7 @@ const Portal = ({ open, onClick, children }) => {
       <Modal open={open} onClick={onClick}>
         {children}
       </Modal>,
-      document.getElementsByTagName('body')[0]
+      document.body
     )
   );
 }
