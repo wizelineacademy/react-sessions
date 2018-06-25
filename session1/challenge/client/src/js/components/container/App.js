@@ -43,16 +43,13 @@ const DataList = ({ data, loading, onClick, principal}) => {
 }
 
 const InformationModal = ({ open, onClick, children }) => {
-  // TODO: Create a Portal component and wrap a modal
-  // Create the portal on the ../presentational/ModalPortal.js file
-
-  const modal = (
+  return (
+    <Portal>
       <Modal open={open} onClick={onClick}>
         {children}
       </Modal>
+    </Portal>
   );
-
-  return null;
 }
 
 class MainTile extends Component {
