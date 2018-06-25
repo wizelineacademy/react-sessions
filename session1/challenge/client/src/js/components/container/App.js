@@ -27,15 +27,17 @@ const DataTile = ({ name, value, loading, active, onClick }) => {
 
 const DataList = ({ data, loading, onClick, principal}) => {
   const items = loading ? FAKE_DATA : data;
-  // TODO: Use the DateTile and return an array for every data
-
-  /* value={items[key]}
-   * name={key}
-   * onClick={onClick}
-   * loading={loading}
-   * active={key === principal}*/
-
-  return null
+  
+  return Object.keys(items).map((key, index) => (
+    <DataTile
+      key={index}
+      value={items[key]}
+      name={key}
+      onClick={onClick}
+      loading={loading}
+      active={key === principal}
+    />
+  ));
 }
 
 const InformationModal = ({ open, onClick, children }) => {
