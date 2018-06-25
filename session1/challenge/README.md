@@ -69,14 +69,13 @@ cd client && yarn start
 └── yarn.lock
 ```
 
-### Requeriments
+### Requirements
 
-[ ] A component with Portal
 [ ] A component using fragments
 [ ] An component using an error boundary
-[ ] Use functional state
+[ ] A component with Portal
 
-Hint: Search for TODO's on the challange/client directory
+Hint: Search for TODO's on the challenge/client directory
 
 
 ### Happy coding
