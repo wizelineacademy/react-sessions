@@ -12,7 +12,9 @@ import { FAKE_DATA, ENDPOINT } from './constants';
 const transformKey = (text) => text.replace(/([a-z](?=[A-Z]))/g, '$1 ');
 
 const DataTile = ({ name, value, loading, active, onClick }) => {
-  // TODO: Throw an error if the value is less than 1
+  if (value < 1) {
+    throw new Error('Zero is not allowed');
+  }
   return (
     <DataTileStyled
       loading={loading}
@@ -27,16 +29,16 @@ const DataTile = ({ name, value, loading, active, onClick }) => {
 
 const DataList = ({ data, loading, onClick, principal}) => {
   const items = loading ? FAKE_DATA : data;
-  
+
   return Object.keys(items).map((key, index) => (
-    <DataTile
-      key={index}
-      value={items[key]}
-      name={key}
-      onClick={onClick}
-      loading={loading}
-      active={key === principal}
-    />
+    <TileErrorBoundary key={index}>
+      <DataTile
+        value={items[key]}
+        name={key}
+        onClick={onClick}
+        loading={loading}
+        active={key === principal}/>
+    </TileErrorBoundary>
   ));
 }
 
