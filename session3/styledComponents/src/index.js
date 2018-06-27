@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
+import './global'
 import registerServiceWorker from './registerServiceWorker'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-
 const Routes = () => (
   <BrowserRouter>
     <Switch>
