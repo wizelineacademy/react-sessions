@@ -1,41 +1,36 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import './App.css'
+import React, { Component } from 'react';
+import './App.css';
+import NavbarList from './components/NavbarList';
 
-const getLinks = () => [ { label: 'Home', url: '/' }, { label: 'Woof!', url: '/dog' }, { label: 'Hello!', url: '/hello' } ]
+const getLinks = () => [
+  { label: 'Home', url: '/' },
+  { label: 'Woof!', url: '/dog' },
+  { label: 'Hello!', url: '/hello' },
+];
 
 class App extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       selected: '/',
-      links: []
-    }
-    this.renderLinks = this.renderLinks.bind(this)
+      links: [],
+    };
+    this.renderLinks = this.renderLinks.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.setState({
-      links: getLinks()
-    })
+      links: getLinks(),
+    });
   }
 
-  renderLinks () {
-    return this.state.links.map(({url, label}) => (
-      <li className='link' key={url}>
-        <Link to={url}>{label}</Link>
-        <span className='border' />
-      </li>
-    ))
+  renderLinks() {
+    return this.state.links.map(link => <NavbarList link={link} />);
   }
 
-  render () {
-    return (
-      <ul className='nav'>
-        {this.renderLinks()}
-      </ul>
-    )
+  render() {
+    return <ul className="nav">{this.renderLinks()}</ul>;
   }
 }
 
-export default App
+export default App;
