@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import './App.css'
+import Zelda from './Zelda'
+import Nav from './Nav'
 
 const getLinks = () => [ { label: 'Home', url: '/' }, { label: 'Woof!', url: '/dog' }, { label: 'Hello!', url: '/hello' } ]
 
@@ -22,18 +22,15 @@ class App extends Component {
 
   renderLinks () {
     return this.state.links.map(({url, label}) => (
-      <li className='link' key={url}>
-        <Link to={url}>{label}</Link>
-        <span className='border' />
-      </li>
+      <Zelda key={url} url={url} label={label} />
     ))
   }
 
   render () {
     return (
-      <ul className='nav'>
+      <Nav>
         {this.renderLinks()}
-      </ul>
+      </Nav>
     )
   }
 }
