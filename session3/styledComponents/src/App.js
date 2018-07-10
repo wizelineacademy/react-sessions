@@ -4,7 +4,7 @@ import NavbarList from './components/NavbarList';
 import { Nav } from './App.style';
 
 injectGlobal`
-ul {
+@keyframes ul {
   0% { 
    width:0;
  }
