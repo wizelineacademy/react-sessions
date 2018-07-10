@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CustomNavStyled = styled.ul`
@@ -21,20 +22,20 @@ export const BorderStyled = styled.span`
 export const CustomNavItemStyled = styled.li`
   display: inline;
   position: relative;
+`;
 
-  a {
-    color: #333;
-    font-weight: ${props => (props.main ? "700" : "400")};
-    display: inline-block;
-    padding: 10px;
-    text-decoration: none;
-  }
+export const CustomNavLink = styled(Link)`
+  color: #333;
+  font-weight: ${props => (props.main ? "700" : "400")};
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
 
-  a:hover {
+  &:hover {
     color: #0088cc;
   }
 
-  a:hover ~ ${BorderStyled} {
+  &:hover ~ ${BorderStyled} {
     animation: ul 0.3s ease-out;
     background: #333;
   }
