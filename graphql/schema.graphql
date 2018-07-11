@@ -1,16 +1,3 @@
 type Query {
-  pokemons: [Pokemon]
-  pokemon(id: ID!): Pokemon
-}
-
-type Pokemon {
-  id: ID!
-  name: String
-  nameWithId: String
-  weight: Weight
-}
-
-type Weight {
-  minimum: String
-  maximum: String
+  hello: String
 }
