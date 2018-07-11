@@ -8,9 +8,6 @@
   },
   "author": "Charlie L",
   "dependencies": {
-    "apollo-server": "^2.0.0-rc.7",
-    "graphql": "^0.13.2",
-    "graphql-import": "^0.6.0",
     "graphql-yoga": "^1.14.12"
   }
 }
