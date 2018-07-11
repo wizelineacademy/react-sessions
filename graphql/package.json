@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "nodemon ."
   },
   "author": "Charlie L",
   "dependencies": {
     "graphql-yoga": "^1.14.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.1"
   }
 }
