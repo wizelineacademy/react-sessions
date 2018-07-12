@@ -7,6 +7,8 @@ const resolvers = {
   },
   Pokemon: {
     nameWithId: args => `${args.name} ${args.id}`,
+    image: args =>
+      `https://pokeres.bastionbot.org/images/pokemon/${parseInt(args.id)}.png`,
   },
 };
 

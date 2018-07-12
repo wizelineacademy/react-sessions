@@ -8,6 +8,7 @@ type Pokemon {
   name: String
   nameWithId: String
   weight: Weight
+  image: String
 }
 
 type Weight {
