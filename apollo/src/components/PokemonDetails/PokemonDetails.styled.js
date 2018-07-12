@@ -15,6 +15,7 @@ export const Name = styled.strong`
 `;
 
 export const Image = styled.img`
+  height: 300px;
   object-fit: contain;
 `;
 
