@@ -8,6 +8,7 @@ import {
   DetailsList,
   DetailItem
 } from "./PokemonDetails.styled";
+
 //<Card>
 //<Image src={image} />
 //<Name>{name}</Name>
