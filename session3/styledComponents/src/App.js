@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './App.css'
-
+// import './App.css'
+import './global';
+import { StyledLink, StyledNav, StyledList, StyleBorder } from "./App.style";
 const getLinks = () => [ { label: 'Home', url: '/' }, { label: 'Woof!', url: '/dog' }, { label: 'Hello!', url: '/hello' } ]
 
 class App extends Component {
@@ -22,18 +23,18 @@ class App extends Component {
 
   renderLinks () {
     return this.state.links.map(({url, label}) => (
-      <li className='link' key={url}>
-        <Link to={url}>{label}</Link>
-        <span className='border' />
-      </li>
+      <StyledList key={url}>
+        <StyledLink to={url} selected={this.state.selected === url}>{label}</StyledLink>
+        <StyleBorder className='border' />
+      </StyledList>
     ))
   }
 
   render () {
     return (
-      <ul className='nav'>
+      <StyledNav>
         {this.renderLinks()}
-      </ul>
+      </StyledNav>
     )
   }
 }
