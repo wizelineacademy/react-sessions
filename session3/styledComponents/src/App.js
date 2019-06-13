@@ -1,6 +1,20 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import './App.css'
+import React, { Component } from 'react';
+import './App.css';
+import ListComponent from './components/ListComponent';
+import { injectGlobal } from 'styled-components';
+
+injectGlobal`
+  @keyframes ul {
+    0% { 
+      width:0;
+    }
+    100% { 
+      width:calc(100% - 23px);
+    }
+  }
+`;
+
+
 
 const getLinks = () => [ { label: 'Home', url: '/' }, { label: 'Woof!', url: '/dog' }, { label: 'Hello!', url: '/hello' } ]
 
@@ -21,11 +35,8 @@ class App extends Component {
   }
 
   renderLinks () {
-    return this.state.links.map(({url, label}) => (
-      <li className='link' key={url}>
-        <Link to={url}>{label}</Link>
-        <span className='border' />
-      </li>
+    return this.state.links.map((link) => (
+      <ListComponent link={link} />
     ))
   }
 
